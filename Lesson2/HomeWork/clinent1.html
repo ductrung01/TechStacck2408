@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form{
+        max-width: 400px;
+        height: 300px;
+        border: 1px solid #ddd;
+        margin: 50px auto;
+        border: 5px solid transparent; /* Đặt border trong suốt */
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    }
+    label{
+        margin-left:10px;
+    }
+    input[type="radio"]{
+        margin-left:20px ;
+    }
+    button{
+        display: inline-block; 
+        margin-left: 20px; 
+        cursor: pointer;
+    }
+</style>
+<body>
+    <form action="" method="post">
+        <h1 style="padding-left: 10px;">HTML form</h1>
+        <label for="firstName">First name:</label>
+        <input type="text" id="firstName" name="firstName" required> <br> <br>
+        
+        <label for="lastName">Last name:</label>
+        <input type="text" id="lastName" name="lastName" required> <br><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required > <br> <br>
+
+        <input type="radio" id="male" name="gender" >
+        <label for="male">Male</label> <br>
+        <input type="radio" id="female" name="gender">
+        <label for="female">Female</label> <br> <br>
+        <button>Submid</button>
+        <button>Reset</button>
+    </form>
+</body>
+</html>

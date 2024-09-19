@@ -1,0 +1,27 @@
+.header{
+    width: 900px;
+    border: 1px solid orange;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgb(236, 236, 95);
+    
+}
+h1{
+    font-weight:30px ;
+}
+.body{
+    margin: 20px auto;
+    width: 900px;
+    background-color: pink;
+    border:1px solid black
+}
+p{
+    padding: 10px;
+
+}
+.footer{
+    margin: 20px auto;
+    width: 900px;
+    background-color: pink;
+    border:1px solid black;
+}

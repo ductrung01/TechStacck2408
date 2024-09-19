@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+
+    }
+    .red{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border: 2px solid orange;
+    }
+    .green{
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        border: 2px solid orange;
+
+    }
+    .yellow{
+        width: 200px;
+        height: 200px;
+        background-color:yellow;
+        border: 2px solid orange;
+
+    }
+    @media(min-width:768px){
+        .container{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    @media(max-width:768px){
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+        }
+        .red{
+            order:3;
+        }
+        .green{
+            order:1;
+
+        }
+        .yellow{
+            order:2;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+    <div class="red"></div>
+    <div class="green"></div>
+    <div class="yellow"></div>
+</div>
+</body>
+</html>

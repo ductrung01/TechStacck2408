@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unlock&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        max-width:1025px ;
+        margin: 0 auto;
+        border: 1px solid #dddd;
+       
+    }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        align-items: center;
+    }
+    .menu-left{
+        display: flex;
+        align-items: center;
+
+    }
+    .menu-left .item {
+        margin: 10px;
+        
+    }
+    .menu-left .icon{
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .menu-left .logo{
+        font-family: "Unlock", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 45px;
+        cursor: pointer;
+    }
+    .menu-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px; /* Khoảng cách xung quanh container nếu cần */
+    }
+    
+    .search-container {
+        position: relative;
+        width: 100%;
+        max-width: 600px; /* Điều chỉnh chiều rộng tối đa của ô input */
+    }
+    
+    .search-icon {
+        position: absolute;
+        top: 50%;
+        left: 10px; /* Khoảng cách từ bên trái của ô input */
+        transform: translateY(-50%);
+        color: #888;
+        font-size: 20px; /* Kích thước của biểu tượng */
+    }
+    
+    .search-input {
+        width: 100%;
+        padding: 15px 50px; /* Padding để biểu tượng không bị che khuất */
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-size: 16px;
+        box-sizing: border-box; /* Đảm bảo padding và border không làm tăng kích thước ô input */
+    }
+    
+    .search-input:focus {
+        border-color: #666;
+        outline: none;
+    }
+    
+  
+    .menu-right {
+        display: flex;
+        align-items: center; 
+        gap: 15px; 
+    }
+    
+    .menu-right i,
+    .menu-right img {
+        margin: 0; 
+        display: block; 
+    }
+    
+    .menu-right i {
+        font-size: 24px; /* Kích thước biểu tượng, có thể điều chỉnh theo nhu cầu */
+        cursor: pointer;
+    }
+    
+    .menu-right img {
+        height: 24px; /* Điều chỉnh chiều cao hình ảnh để đồng bộ kích thước với biểu tượng */
+        cursor: pointer;
+    }
+    .back{
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        margin-left: 25px;
+        margin-bottom: 30px;
+    }
+    .back i{
+        font-size:15px ;
+        cursor: pointer;
+    }
+    .cards{
+        padding-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+    }
+   .card1{
+    display: flex;
+    position: relative;
+    padding-bottom: 20px;
+
+    
+   }
+   .card2{
+
+   }
+   .card3{
+    
+   }
+   .card4{
+    
+   }
+   .card5{
+    
+   }
+   .card6{
+    
+   }
+   .card1-ava{
+    border: 1px solid #ccc;
+    background-color: #ccc;
+    padding:15px;
+    border-radius: 20px;
+    position: relative; /* Để có thể sử dụng absolute cho các phần tử con */
+    z-index: 1;
+    left: 20px;
+    
+   }
+   
+   .information{
+    background-color: #FFD38A;
+    position: relative;
+    z-index: 0;
+    padding-left:35px ;
+    border-top-right-radius: 20px ;
+    border-bottom-right-radius: 20px;
+   }
+   
+   
+   .information-two{
+    background-color: #ABE1FF;
+    position: relative;
+    z-index: 0;
+    padding-left:35px ;
+    border-top-right-radius: 20px ;
+    border-bottom-right-radius: 20px;
+   }
+   .information-three{
+
+    background-color: #D6E7FF;
+    position: relative;
+    z-index: 0;
+    padding-left:35px ;
+    border-top-right-radius: 20px ;
+    border-bottom-right-radius: 20px;
+   }
+   .information-four{
+    background-color: #ADFFE6;
+    position: relative;
+    z-index: 0;
+    padding-left:35px ;
+    border-top-right-radius: 20px ;
+    border-bottom-right-radius: 20px;
+   }
+   .information-five{
+    background-color: #FFC5A0;
+    position: relative;
+    z-index: 0;
+    padding-left:35px ;
+    border-top-right-radius: 20px ;
+    border-bottom-right-radius: 20px;
+   }
+   .information-six{
+    background-color: #A5FF96;
+    position: relative;
+    z-index: 0;
+    padding-left:35px ;
+    border-top-right-radius: 20px ;
+    border-bottom-right-radius: 20px;
+   }
+   .ava-call{
+    margin-top: 10px;
+   }
+   .information-text-text{
+  
+    margin-bottom: 40px;
+    margin-left: 10px;
+
+   }
+   .information-text-text-three{
+    margin-bottom: 29px;
+    margin-left: 10px;
+   }
+   .information-text-text-four{
+    margin-bottom: -6px;
+    margin-left: 10px;
+   }
+   .information-text-text-five{
+    margin-bottom: 26px;
+    margin-left: 10px;
+   }
+   .information-text-text-six{
+    margin-bottom: 63px;
+    margin-left: 10px;
+   }
+    @media (min-width:720px),(max-width:1024px){
+        .cards{
+           
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="menu">
+        <div class="menu-left">
+            <div class="menu-left item icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
+            <div class="menu-left item logo">Social</div>
+        </div>
+        <div class="menu-center">
+            <div class="search-container">
+                <i class="fa fa-search search-icon" aria-hidden="true"></i>
+                <input type="text" class="search-input" placeholder="Search">
+            </div>
+        </div>
+        
+        <div class="menu-right">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <img src="./img/Vector.png" alt="heart">
+            <img src="./img/logo.png" alt="logo">
+        </div>
+      </div>
+      <div class="back">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        <img src="./img/Speakers.png" alt="">
+      </div>
+      <div class="cards">
+        <div class="card1">
+            <div class="card1-ava">
+                <img src="./img/Ava.png" alt="anh ava">
+                <div class="ava-call">
+                    <img src="./img/Call.png" alt="">
+                   
+                </div>
+            </div>
+            <div class="information ">
+                <div class="iformation-text">
+                    <div class="information-text-text">
+                    <h1>Olivia Little</h1>
+                    <p>UI / UX Designer</p>
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i> Seattle ,USA</p>
+                   <div  class="information-text-text-address">
+                    <p >Speaks:English,<br>Spanish</p>
+                    </div>
+                </div>
+                    <img src="./img/Social (1).png" alt="">
+                </div>
+              
+            </div>
+        </div>
+        <div class="card1">
+            <div class="card1-ava">
+                <img src="./img/Ava1.png" alt="anh ava">
+                <div class="ava-call">
+                    <img src="./img/Call.png" alt="">
+                   
+                </div>
+            </div>
+            <div class="information-two">
+                <div class="iformation-text">
+                    <div class="information-text-text">
+                    <h1>Julia Kelley </h1>
+                    <p>Product Designer</p>
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i> Oslo, Canada</p>
+                   <div class="information-text-text-address">
+                    <p >Speaks:English,<br> Portugueseh</p>
+                </div>
+                </div>
+                    <img src="./img/Social (1).png" alt="">
+                </div>
+              
+            </div>
+        </div>
+        <div class="card1">
+            <div class="card1-ava">
+                <img src="./img/Ava2.png" alt="anh ava">
+                <div class="ava-call">
+                    <img src="./img/Call.png" alt="">
+                   
+                </div>
+            </div>
+            <div class="information-three">
+                <div class="iformation-text">
+                    <div class="information-text-text-three">
+                    <h1 style="margin-bottom:0;">Kenneth</h1>
+                    <h1 style="margin-top:0;"> Harmon</h1>
+                    <p>Visual Designer</p>
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i> Phoenix, USA</p>
+                   <div class="information-text-text-address">
+                    <p >Speaks:English</p>
+                </div>
+                </div>
+                    <img  src="./img/Social (1).png" alt="">
+                </div>
+              
+            </div>
+        </div>
+        <div class="card1">
+            <div class="card1-ava">
+                <img src="./img/Ava3.png" alt="anh ava">
+                <div class="ava-call">
+                    <img src="./img/Call.png" alt="">
+                   
+                </div>
+            </div>
+            <div class="information-four">
+                <div class="iformation-text">
+                    <div class="information-text-text-four">
+                        <h1 style="margin-bottom:0;">Brian </h1>
+                        <h1 style="margin-top:0;"> Fisher</h1>
+                        <p>Motion Designer</p>
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i>Austin, USA</p>
+                   <div class="information-text-text-address">
+                    <p >Speaks:English, Polish,<br> Russian</p>
+                </div>
+                </div>
+                    <img src="./img/Social (1).png" alt="">
+                </div>
+              
+            </div>
+        </div>
+        <div class="card1">
+            <div class="card1-ava">
+                <img src="./img/Ava4.png" alt="anh ava">
+                <div class="ava-call">
+                    <img src="./img/Call.png" alt="">
+                   
+                </div>
+            </div>
+            <div class="information-five">
+                <div class="iformation-text">
+                    <div class="information-text-text-five">
+                        <h1 style="margin-bottom:0;">Jonas </h1>
+                        <h1 style="margin-top:0;">  Jacobs</h1>
+                    <p>Information Architect</p>
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i> San Jose, USA</p>
+                   <div class="information-text-text-address">
+                    <p >Speaks:English</p>
+                </div>
+                </div>
+                    <img src="./img/Social (1).png" alt="">
+                </div>
+              
+            </div>
+        </div>
+        <div class="card1">
+            <div class="card1-ava">
+                <img src="./img/Ava5.png" alt="anh ava">
+                <div class="ava-call">
+                    <img src="./img/Call.png" alt="">
+                   
+                </div>
+            </div>
+            <div class="information-six">
+                <div class="iformation-text">
+                    <div class="information-text-text-six">
+                    <h1>Joan Glenn </h1>
+                    <p>Interaction Designer</p>
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i>Houston, USA</p>
+                   <div class="information-text-text-address">
+                    <p >Speaks:English</p>
+                </div>
+                </div>
+                    <img src="./img/Social (1).png" alt="">
+                </div>
+              
+            </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

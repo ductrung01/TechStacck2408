@@ -1,0 +1,47 @@
+.box190-50{
+    height: 70px;
+    width: 190px;
+    background-color:rgb(170, 170, 249);
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+h1{
+    place-items: center;
+    padding: auto 0;
+}
+h2{
+
+}
+span{
+    color: rgb(174, 174, 242);
+}
+.text{
+    text-align: center;
+    font-size: 30px;
+}
+.textlong{
+    text-align: center;
+    font-size: 24px;
+   color:rgb(126, 126, 124)
+}
+.button{
+    text-align: center;
+    
+}
+button{
+    background-color: black;
+    color: white;
+    height: 60px;
+    width: 180px;
+   margin: 10px;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   cursor: pointer;
+
+}
+button:hover{
+    background-color: white;
+    color: black;
+}

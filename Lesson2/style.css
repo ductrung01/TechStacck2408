@@ -1,0 +1,21 @@
+h1 {
+    color: pink;
+}
+.heading{
+    color: aqua;
+}
+#heading{
+    color: purple;
+}
+h4.heading{
+ color: brown;
+}
+#footer{
+    color: blue;
+}
+.footer{
+    color: yellow;
+}
+h6{
+    color: bisque;
+}

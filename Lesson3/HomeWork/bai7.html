@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .maincontact{
+        display: flex;
+        justify-content: space-around;
+        max-width: 800px;
+        border: 1px solid #ddd;
+        margin: 50px auto;
+        border-radius: 5px;
+        padding: 20px;
+        background-color: #f9f9f9;
+    }
+    .contact{
+        width:45%;
+    }
+    .info{
+        width: 45%;
+    }
+    .contact label ,
+    .info label{
+        font-size: 20px;
+        margin: 10px 0 5px;
+
+    }
+    .contact input ,
+    .contact textarea{
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .contact button{
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #4CAF50;
+        border: none;
+        cursor: pointer;
+    }
+    .contact button:hover{
+        background-color: #fff;
+        color: black;
+        border: 1px solid black;
+
+    }
+</style>
+<body>
+    <div class="maincontact">
+        <div class="contact">
+            <h2>Liên hệ với chúng tôi</h2>
+            <form action="" method="post">
+                <label for="username">Tên của bạn</label> <br>
+                <input type="text" id="username" name="username" required> <br>
+                <label for="email">Email của bạn</label> <br>
+                <input type="email" id="email" name="email" required> <br>
+                <label for="message">Tin nhắn của bạn</label> <br>
+                <textarea name="message" id="message"></textarea> <br>
+                <button type="submid">Gửi</button>
+            </form>
+        </div>
+        <div class="info">
+            <h2>Thông tin liên hệ</h2> 
+            <p style=" font-size: 20px;">Địa chỉ: 123 Đường ABC,Quận 1, TP.Hồ Chí Minh</p>
+            <p style=" font-size: 20px;">Điện thoại:0335654203</p> 
+            <p style=" font-size: 20px;">Email: info@example.com</p>
+        </div>
+    </div>
+</body>
+</html>

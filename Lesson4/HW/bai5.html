@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 5</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+
+    }
+    .menu{
+        display: flex;
+      
+        flex-wrap:wrap;
+        
+    }
+    .column{
+       flex: 1 1 200px;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px 5px rgba(198, 193, 193, 0.2);
+        padding: 10px;
+       
+        margin-top:10px ;
+        background-color: #f0eeee;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="menu">
+        <div class="column">Column 1</div>
+        <div class="column">Column 2</div>
+        <div class="column">Column 3</div>
+        <div class="column">Column 4</div>
+    </div>
+</body>
+</html>
+<!-- Trong CSS, thuộc tính flex được sử dụng để thiết lập cách mà một phần tử flex sẽ hoạt động trong một container flex. Cú pháp flex: 1 1 200px có nghĩa là:
+
+flex-grow (1): Phần tử có thể mở rộng để chiếm không gian còn lại trong container. Giá trị 1 có nghĩa là phần tử này sẽ nhận được một phần của không gian còn lại, tỷ lệ với các phần tử khác cũng có flex-grow khác.
+
+flex-shrink (1): Phần tử có thể co lại nếu không gian trong container không đủ. Giá trị 1 có nghĩa là phần tử này sẽ co lại theo tỷ lệ với các phần tử khác nếu cần.
+
+flex-basis (200px): Đây là kích thước cơ bản của phần tử trước khi tính toán không gian còn lại. Giá trị 200px có nghĩa là phần tử sẽ bắt đầu với chiều rộng là 200px.
+
+Tóm lại, flex: 1 1 200px có nghĩa là phần tử sẽ bắt đầu với chiều rộng 200px, có thể mở rộng và co lại nếu cần, tùy thuộc vào không gian có sẵn trong container. -->
